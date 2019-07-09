@@ -1,4 +1,4 @@
-package com.jadeStoneStroner.sso.base;
+package com.jadeStoneStronger.SSO.base;
 
 /**
  * Hello world!

@@ -1,4 +1,4 @@
-package com.jadeStoneStroner.sso.base.domain;
+package com.jadeStoneStronger.SSO.base.domain;
 
 public class Test {
 

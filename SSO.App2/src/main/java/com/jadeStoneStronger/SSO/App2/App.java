@@ -1,4 +1,4 @@
-package com.jadeStoneStronger.SSO.center;
+package com.jadeStoneStronger.SSO.App2;
 
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;

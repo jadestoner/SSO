@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="from" th:text="${from}"></p>
+<p id="loginToken" th:text="${loginToken}"></p>
+
+<form id='test_form' action='login' method='post'>
+    <input type='text' name='username' value=''/>
+    <input type='password' name='pwd' value =''/>
+    <input type='hidden' name='from' th:value ='${from}'/>
+    <input type='hidden' name='loginToken' th:value ='${loginToken}'/>
+    <button type='submit'>提交<button/>
+<form/>
+</body>
+</html>
