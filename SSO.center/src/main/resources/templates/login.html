@@ -3,17 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/core.js"></script>
 </head>
 <body>
+${from}
+${loginToken}
 <p id="from" th:text="${from}"></p>
 <p id="loginToken" th:text="${loginToken}"></p>
 
 <form id='test_form' action='login' method='post'>
     <input type='text' name='username' value=''/>
     <input type='password' name='pwd' value =''/>
-    <input type='hidden' name='from' th:value ='${from}'/>
-    <input type='hidden' name='loginToken' th:value ='${loginToken}'/>
+    <input id="form_from" type='hidden' name='from' th:value ='${from}'/>
+    <input id="form_loginToken" type='hidden' name='loginToken' th:value ='${loginToken}'/>
     <button type='submit'>提交<button/>
 <form/>
+<script type='text/javascript'>
+function getCookie(sName)
+{
+	var aCookie = document.cookie.split("; ");
+	for (var i=0; i < aCookie.length; i++)
+	{
+		var aCrumb = aCookie[i].split("=");
+		if (sName == aCrumb[0])
+		return unescape(aCrumb[1]);
+	}
+	return null;
+}
+
+	window.onload=function(){
+		// cookie存在，则自动登陆
+	　　　	var IS_LOGIN = getCookie('COOKIE');
+	　　　	if(IS_LOGIN){
+	　　　		var from = document.getElementById("form_from").value;
+	　　　		var loginToken = document.getElementById("form_loginToken").value;
+	　　　		window.location.href="login?from="+from+"&loginToken="+loginToken;
+	　　　	}
+	}
+	
+	
+</script> 
 </body>
 </html>

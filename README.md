@@ -19,9 +19,16 @@
 		3.1 并返回到请求的应用的认证页面带上一个ticket。
 	4.应用拿到ticket，请求sso认证中心，判断ticket是否有效，如果有效，则认为登陆成功，生成一个session并返回一个cookie
 	
+	总的来说是俩阶段，一阶段是获取sso的ticket，二阶段是自己生成cookie和session。
+	
+	不支持cookie的场景，可以将cookie代表的值挂在url请求后面，原理是类似的，
 
 ## 使用方法
-
+-	1.先启动认证中心SSO.center
+-	2.启动应用SSO.app1,访问项目localhost:9090/app1,登陆项目首页，
+-		2.1 首页不需要登陆即可访问，访问资源页时会跳转到sso认证中心的登录页，登陆完了后会自动跳转到之前请求的资源页。
+-	3.启动应用SSO.app2(或者把app1的端口改变一下即可)，访问应用app2的资源页，会发现自动登陆了。
+-	4.登出待续...
 	
 ## 版本
 
@@ -55,8 +62,8 @@
 1.	git remote add upstream https://github.com/jadeStoneStonger/SSO
 2. 	用git remote -v可以看到一个origin是自己的，另外一个upstream原作者。
 3. 	更新代码：
-git fetch upstream //去拉去原作者的仓库更新
-git checkout master //切换到自己的master
-git merge upstream/master //merge或者rebase到你的master
+	git fetch upstream //去拉去原作者的仓库更新
+	git checkout master //切换到自己的master
+	git merge upstream/master //merge或者rebase到你的master
 结束！
 ```
