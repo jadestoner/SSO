@@ -1,3 +1,5 @@
+> qq群分享交流：452753966
+
 # SSO 单点登陆
 
 同域下的多个应用只需要（将cookie设置到顶级域名下+共享session如内存spring session或redis，或数据库）即可实现登陆哦
