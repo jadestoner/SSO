@@ -2,7 +2,7 @@
 
 # SSO 单点登陆
 
-同域下的多个应用只需要（将cookie设置到顶级域名下+共享session如内存spring session或redis，或数据库）即可实现登陆哦
+备注：同域下的多个应用只需要（将cookie设置到顶级域名下+共享session如内存spring session或redis，或数据库）即可实现登陆哦，不需要再做统一登陆中心了。本文主要针对不同域名下的单点登陆。
 
 ## 模块介绍
 -	center 注册中心
