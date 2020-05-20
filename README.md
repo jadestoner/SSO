@@ -41,6 +41,8 @@
 
 详情见 release线。
 每完成一个功能点，都会封出一个release版本。
+
+https://github.com/jadeStoneStonger/SSO/releases
 	
 ## 项目内容考虑
 
