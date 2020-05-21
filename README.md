@@ -27,6 +27,8 @@
 
 ## 业务流程
 
+	![交互图](https://yqfile.alicdn.com/dcb743204f8a201be53df5338fc34affe5fa1059.png)
+
 	https://yq.aliyun.com/articles/636281
 	
 	登陆流程：
