@@ -7,6 +7,7 @@
  qq群交流：452753966 ，加群备注：sso，大佬多多，交流多多。
  
  ## 使用方法
+-       0.先启动redis，端口6379即可
 -	1.先启动认证中心SSO.center 
 -	1.1 找到App.class 运行main方法即可（Spring boot）
 
